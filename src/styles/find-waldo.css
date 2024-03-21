@@ -1,0 +1,107 @@
+.pic-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    img {
+        max-width: calc(90vw - 60px);
+        cursor: crosshair;
+        border-radius: 20px;
+        border: 4px solid;
+    }
+}
+
+body {
+    background-color: hsl(39, 100%, 93%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.menu {
+    position: absolute;
+    display: none;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+    gap: 0.3rem;
+
+    .target {
+        height: 50px;
+        width: 50px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 3px dashed rgb(0, 0, 0);
+        border-radius: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-flow: column;
+        gap: 0.3rem;
+
+        button {
+            margin: 0;
+            filter: invert();
+        }
+
+        transform-origin: top;
+        transform: scaleY(0.2);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    div {
+        transform: scale(0.2);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.menu:hover {
+    nav {
+        transition: transform 0.2s ease-in-out;
+        transform: scaleY(1);
+    }
+
+    div {
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.characters-container {
+    margin: 1rem;
+    max-width: 60px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+        max-width: inherit;
+    }
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .header {
+        grid-column: 1/-1;
+    }
+}
+
+.popup {
+    background-color: hsl(39, 100%, 93%);
+    border-bottom: 5px solid hsl(39, 100%, 65%);
+    padding: 1rem;
+
+    input {
+        height: 1.5rem;
+    }
+}
